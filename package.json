@@ -1,5 +1,5 @@
 {
-  "name": "url-to-app-uri",
+  "name": "url-to-deep-link",
   "version": "0.0.1",
   "description": "Transform URLs to Deep Links and open your users apps",
   "main": "./dist/index.js",
@@ -28,8 +28,10 @@
   "keywords": [
     "url",
     "app",
-    "uri",
-    "scheme"
+    "deep",
+    "link",
+    "social",
+    "media"
   ],
   "devDependencies": {
     "babel-core": "^6.26.3",
