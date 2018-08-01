@@ -31,29 +31,23 @@ At this moment the following transformations are available:
 
 ### Facebook
 
-- #### Page
-
-`https://www.facebook.com/YOUR_PAGE_ID`
+- **Page**: `https://www.facebook.com/YOUR_PAGE_ID`
 
 ### Instagram
 
-- #### Profile
+- **Profile**: `https://www.instagram.com/YOUR_USERNAME`
 
-`https://www.instagram.com/YOUR_USERNAME`
-
-- #### Post (ONLY ANDROID)
-
-`https://www.instagram.com/p/YOUR_POST_ID`
+- **Post** (ONLY ANDROID): `https://www.instagram.com/p/YOUR_POST_ID`
 
 ### Twitter
 
-- #### Profile
+- **Profile**: `https://www.twitter.com/YOUR_USERNAME`
 
-`https://www.twitter.com/YOUR_USERNAME`
+- **Tweet**: `https://twitter.com/YOUR_USERNAME/status/YOUR_TWEET_ID`
 
-- #### Tweet
+## Notes
 
-`https://twitter.com/YOUR_USERNAME/status/YOUR_TWEET_ID`
+Facebook URL transformation by page name instead of ID and Instagram's post URL on iOS are not suported because they require an asynchronous call in order to get the ID of the page/post. In [`./lib/apps/facebook.js`](./lib/apps/facebook.js) you can find an async version commented working fine although Facebook apps are currently a mess and there is no way to get an API access token.
 
 ## Test
 
