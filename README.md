@@ -1,2 +1,3 @@
-# url-to-app-uri
-Helper functions to transform websites URLs to their apps URIs
+# url-to-deep-link
+
+Transform URLs to Deep Links
