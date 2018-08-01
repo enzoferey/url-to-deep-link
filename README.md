@@ -21,6 +21,8 @@ Since [universal links](https://developer.apple.com/ios/universal-links/) are st
 ## Usage
 
 ```js
+// ES5 require syntax also works
+// var getAndroidDeepLink = require("url-to-deep-link").getAndroidDeepLink;
 import { getAndroidDeepLink, getIOSDeepLink } from "url-to-deep-link";
 
 const yourAndroidDeepLink = getAndroindDeepLink("YOUR URL");
