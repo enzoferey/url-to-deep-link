@@ -1,6 +1,6 @@
 {
   "name": "url-to-deep-link",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Transform URLs to Deep Links and open your users apps",
   "main": "./dist/index.js",
   "files": [
