@@ -1,7 +1,7 @@
 {
   "name": "url-to-app-uri",
   "version": "0.0.1",
-  "description": "Transform URLs to Deep Links",
+  "description": "Transform URLs to Deep Links and open your users apps",
   "main": "./dist/index.js",
   "files": [
     "dist",
