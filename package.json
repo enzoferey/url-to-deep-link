@@ -1,28 +1,29 @@
 {
   "name": "url-to-app-uri",
   "version": "0.0.1",
-  "description": "Helper functions to transform websites URLs to their apps URIs",
+  "description": "Transform URLs to Deep Links",
   "main": "./dist/index.js",
   "files": [
     "dist",
     "*.md"
   ],
   "scripts": {
-    "babel": "babel ./lib/index.js -o ./dist/index.js",
-    "prepublishOnly": "npm run babel",
-    "test": "mocha --require babel-core/register",
-    "test:watch": "mocha --watch --require babel-core/register"
+    "build": "webpack --mode=\"production\"",
+    "watch": "webpack --watch",
+    "prepublishOnly": "npm run build",
+    "test": "mocha --recursive --require babel-core/register",
+    "test:watch": "mocha --watch --recursive --require babel-core/register"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enzoferey/url-to-app-uri.git"
+    "url": "git+https://github.com/enzoferey/url-to-deep-link.git"
   },
   "author": "Enzo Ferey",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/enzoferey/url-to-app-uri/issues"
+    "url": "https://github.com/enzoferey/url-to-deep-link/issues"
   },
-  "homepage": "https://github.com/enzoferey/url-to-app-uri#readme",
+  "homepage": "https://github.com/enzoferey/url-to-deep-link#readme",
   "keywords": [
     "url",
     "app",
@@ -30,10 +31,12 @@
     "scheme"
   ],
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0"
   }
 }
