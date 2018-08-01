@@ -11,8 +11,9 @@ describe("facebook(href, target)", () => {
       );
     });
   });
+
   /* IOS */
-  describe("when called for an ios deep link to a tweet", () => {
+  describe("when called for an ios deep link", () => {
     it("should return the URL wrapper", () => {
       const deeplink = apps.facebook(
         "https://facebook.com/566205457090856",

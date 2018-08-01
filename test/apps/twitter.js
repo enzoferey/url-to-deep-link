@@ -1,6 +1,6 @@
 describe("twitter(href, target)", () => {
   /* ANDROID */
-  describe("when called for an android deep link", () => {
+  describe("when called for an android deep link to a profile", () => {
     it("should return the URL wrapper", () => {
       const deeplink = apps.twitter(
         "https://www.twitter.com/enzo_ferey",
@@ -11,16 +11,19 @@ describe("twitter(href, target)", () => {
       );
     });
   });
-  /* IOS */
-  describe("when called for an ios deep link to a tweet", () => {
+  describe("when called for an android deep link to a tweet", () => {
     it("should return the URL wrapper", () => {
       const deeplink = apps.twitter(
         "https://twitter.com/enzo_ferey/status/1007387756077690880",
-        IOS_TARGET
+        ANDROID_TARGET
       );
-      expect(deeplink).to.equal("twitter://status?id=1007387756077690880");
+      expect(deeplink).to.equal(
+        "intent://twitter.com/enzo_ferey/status/1007387756077690880#Intent;package=com.twitter.android;scheme=https;end"
+      );
     });
   });
+
+  /* IOS */
   describe("when called for an ios deep link to a profile", () => {
     it("should return the URL wrapper", () => {
       const deeplink = apps.twitter(
@@ -28,6 +31,15 @@ describe("twitter(href, target)", () => {
         IOS_TARGET
       );
       expect(deeplink).to.equal("twitter://user?screen_name=enzo_ferey");
+    });
+  });
+  describe("when called for an ios deep link to a tweet", () => {
+    it("should return the URL wrapper", () => {
+      const deeplink = apps.twitter(
+        "https://twitter.com/enzo_ferey/status/1007387756077690880",
+        IOS_TARGET
+      );
+      expect(deeplink).to.equal("twitter://status?id=1007387756077690880");
     });
   });
 });
