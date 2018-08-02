@@ -35,6 +35,8 @@ At this moment the following transformations are available (any other option wil
 
 - **Page**: `https://www.facebook.com/YOUR_PAGE_ID`
 
+You can get your id [here](https://findmyfbid.com/).
+
 ### Instagram
 
 - **Profile**: `https://www.instagram.com/YOUR_USERNAME`
