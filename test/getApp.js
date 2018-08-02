@@ -1,6 +1,16 @@
 import { getApp } from "../lib";
 
 describe("getApp()", () => {
+  describe("when called with a no match URL", () => {
+    it("should return undefined", () => {
+      let app = getApp("");
+      expect(app).to.equal(undefined);
+
+      app = getApp("instagram");
+      expect(app).to.equal(undefined);
+    });
+  });
+
   describe("when called with a full https URL", () => {
     it("should return the proper app name", () => {
       let app = getApp("https://www.twitter.com");
