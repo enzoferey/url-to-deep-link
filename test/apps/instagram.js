@@ -39,7 +39,7 @@ describe("instagram(href, target)", () => {
         "https://www.instagram.com/p/BlL4dWAHjca",
         IOS_TARGET
       );
-      expect(deeplink).to.equal("We do not support this at the moment");
+      expect(deeplink).to.equal(undefined);
     });
   });
 });

@@ -29,7 +29,7 @@ const yourAndroidDeepLink = getAndroindDeepLink("YOUR URL");
 const yourIOSDeepLink = getIOSDeepLink("YOUR URL");
 ```
 
-At this moment the following transformations are available:
+At this moment the following transformations are available (any other option will return `undefined`):
 
 ### Facebook
 
