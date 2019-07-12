@@ -11,7 +11,7 @@
     "build": "webpack --mode=\"production\"",
     "watch": "webpack --watch",
     "prettier": "prettier --config \"./.prettierrc.js\" --write \"./lib/**/*.js\"",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run prettier && npm run build",
     "test": "mocha --recursive --require babel-core/register",
     "test:watch": "mocha --watch --recursive --require babel-core/register"
   },
